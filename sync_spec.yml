@@ -1,0 +1,19 @@
+---
+kind: source
+spec:
+  name: "xkcd"
+  path: "cloudquery/xkcd"
+  version: "v1.0.6"
+  tables: ['*']
+  destinations:
+    - "sqlite"
+  spec:
+---
+kind: destination
+spec:
+  name: sqlite
+  path: cloudquery/sqlite
+  registry: cloudquery
+  version: "v2.9.4"
+  spec:
+    connection_string: "path/to/your/user/newdatabase.db"
